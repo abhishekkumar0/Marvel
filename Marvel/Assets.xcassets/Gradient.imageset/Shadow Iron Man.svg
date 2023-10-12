@@ -1,0 +1,9 @@
+<svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Shadow Iron Man" d="M0 4.00489C0 1.79576 1.79086 0.00489807 4 0.00489807H105C107.209 0.00489807 109 1.79576 109 4.0049V107.252C109 109.461 107.209 111.252 105 111.252H4C1.79086 111.252 0 109.461 0 107.252V4.00489Z" fill="url(#paint0_linear_53_400)"/>
+<defs>
+<linearGradient id="paint0_linear_53_400" x1="54.5" y1="0.00489807" x2="54.5" y2="111.252" gradientUnits="userSpaceOnUse">
+<stop offset="0.411458" stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>
