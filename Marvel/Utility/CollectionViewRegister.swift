@@ -6,3 +6,8 @@
 //
 
 import Foundation
+enum CollectionViewCell: String{
+    case ImageCollectionView
+    case Header
+    case FilterCell
+}

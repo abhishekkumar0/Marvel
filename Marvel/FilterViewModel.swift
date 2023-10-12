@@ -6,3 +6,7 @@
 //
 
 import Foundation
+class FilterViewModel: NSObject{
+    var filters = [Filter]()
+    var userSelectedFilter: String?
+}
