@@ -27,7 +27,6 @@ class ComicsViewController: UICollectionViewController{
         return button
     }()
     
-    private let alphaView = AlphaView()
     private let viewModel = ComicsViewModel()
     
     init() {
@@ -49,8 +48,6 @@ class ComicsViewController: UICollectionViewController{
 extension ComicsViewController{
     
     private func configureView(){
-        self.view.addSubview(alphaView)
-        self.alphaView.frame = self.view.frame
         self.configureSkeletonView()
         self.setUpNavigationBar()
         self.setUpCollectionView()
@@ -131,7 +128,7 @@ extension ComicsViewController{
     }
     
     private func openFilter(){
-        self.alphaView.showView()
+        self.showAlphaView()
         let vc = FilterViewController()
         vc.delegate = self
         vc.viewModel.userSelectedFilter = self.viewModel.dateDescriptor
@@ -194,9 +191,9 @@ extension ComicsViewController: SendData{
         guard let data = data as? String else { return }
         switch data{
         case SENDDATA.DISMISSVIEW.rawValue:
-            self.alphaView.hideView()
+            self.hideAlphaView()
         case SENDDATA.FILTERSELECTED.rawValue:
-            self.alphaView.hideView()
+            self.hideAlphaView()
             guard let dataPasser = dataPasser as? String else {
                 self.filterComics(dateDescriptor: nil)
                 return
