@@ -25,8 +25,10 @@ class NetworkManager{
             return completion(nil, nil, NSError(domain: "URL Error", code: 0, userInfo: nil))
         }
         var request = URLRequest(url: url)
+        print("URL \(url)")
+        print("Request \(request)")
         request.httpMethod = RequestType.GET.rawValue
-        URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             completion(data, response, error)
         }.resume()
     }

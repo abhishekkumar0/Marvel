@@ -28,7 +28,6 @@ class ComicsViewController: UICollectionViewController{
     }()
     
     private let alphaView = AlphaView()
-    
     private let viewModel = ComicsViewModel()
     
     init() {

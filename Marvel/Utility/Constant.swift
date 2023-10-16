@@ -26,10 +26,8 @@ func MD5(data: Data) -> String {
 }
 
 func getTimeStampAndHash() -> (timeStamp: String, hash: String){
-    let timestamp = "\(Date().timeIntervalSinceNow)"
+    let timestamp = "\(Date().timeIntervalSince1970)"
     let dataToHash = "\(timestamp)\(privateKey)\(publicKey)".data(using: .utf8)!
-    print(timestamp)
-    print(MD5(data: dataToHash))
     return (timestamp, MD5(data: dataToHash))
 }
 

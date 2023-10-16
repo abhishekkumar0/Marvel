@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol SendData {
+protocol SendData: AnyObject {
     func passData(dataPasser: Any, data: Any)
 }

@@ -57,7 +57,11 @@ class FilterViewController: UIViewController{
         return tagListView
     }()
     
-    var delegate: SendData?
+    deinit {
+        print("Filter view controller deinit is working")
+    }
+    
+    weak var delegate: SendData?
     internal let viewModel = FilterViewModel()
     private var tagListViewHeight: NSLayoutConstraint?
     

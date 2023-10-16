@@ -64,7 +64,6 @@ extension HomeViewController{
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController
-        
         navigationController?.navigationBar.largeContentImage = UIImage(named: "App Bar Logo")
     }
     
@@ -202,7 +201,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout{
         if let count = self.viewModel.marvelCharacters?.data.results.count, indexPath.item == (count - 1){
             self.viewModel.offset += 1
             let param: [String: Any] = ["limit": self.viewModel.limit, "offset": self.viewModel.offset]
-            print(param)
             self.getCharacters(param: param)
         }
     }
